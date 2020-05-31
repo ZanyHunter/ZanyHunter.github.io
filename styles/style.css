@@ -1,0 +1,41 @@
+/* Header font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --global-content-width: 800px;
+
+    --theme-text-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--theme-text-color);
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.content {
+    width: 800px;
+}
+
+@media only screen and (max-width:800px) {
+    .content {
+        width: 80%;
+    }
+}

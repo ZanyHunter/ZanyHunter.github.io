@@ -1,0 +1,243 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#video-banner {
+    width: 100%;
+    height: 100%;
+}
+
+#video-banner--main {
+    height: 100vh;
+    background-color: black;
+    z-index: -3;
+}
+
+#video-banner--video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#video-banner--title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    min-width: 620px;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+#video-banner--polygon {
+    height: 400px;
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    background-color: white;
+}
+
+#wrapper--drop-shadow {
+    filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 1));
+    position: relative;
+    z-index: 4;
+}
+
+#video-banner--title h1 {
+    color: white;
+    opacity: 0;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    animation: title-move 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transform: translateY(80px);
+    padding-top: 20px;
+}
+
+#video-banner--title hr {
+    border: 3px solid white;
+    width: 80%;
+    margin: auto;
+    animation: wipe 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform: translate(0%);
+    padding-bottom: 0px;
+}
+
+#video-banner--reveal-title {
+    overflow: hidden;
+}
+
+#video-banner--reveal-subtitle {
+    overflow: hidden;
+}
+
+#video-banner--title h2 {
+    color: white;
+    opacity: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 2px;
+    animation: move 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    transform: translateY(-80px);
+    padding-top: 20px;
+}
+
+#home-next-element {
+    position: relative;
+    height:400px;
+    width:100%;
+    background-color: #ccc;
+    transform:translateY(-80px);
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left:-25px;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s;
+    animation: arrow 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    background-image: url("/ref/images/down-arrow.svg");
+    z-index: 2;
+}
+
+.arrow:hover {
+    transform: translateY(-60px);
+}
+
+@keyframes arrow {
+    50%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+        40% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+        60% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+@keyframes wipe {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 60vw;
+    }
+}
+
+@keyframes title-move {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+        transform: translateY(80px);
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+        transform: translateX(0%);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+        transform: translateX(0%);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+
+    @keyframes wipe {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100vw;
+        }
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .arrow {
+        height: 80px;
+        width: 80px;
+        margin-left:-40px;
+    }
+
+    #video-banner--title h1 {
+        font-size: 10vw;
+    }
+
+    #video-banner--title h2 {
+        font-size: 4.95vw;
+        padding-top: 2.2vw;
+    }
+
+    #video-banner--title {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
