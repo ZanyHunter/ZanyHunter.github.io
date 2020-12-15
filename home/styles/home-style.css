@@ -80,23 +80,23 @@ html {
 }
 
 #video-banner--reveal-subtitle {
-    overflow: hidden;
-}
-
-#video-banner--title h2 {
-    color: white;
     opacity: 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    font-size: 40px;
-    letter-spacing: 2px;
+    overflow: hidden;
     animation: move 1s;
     animation-timing-function: ease-out;
     animation-delay: 0.6s;
     animation-fill-mode: forwards;
     transform: translateY(-80px);
     padding-top: 20px;
+}
+
+#video-banner--title h2 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
 #home-next-element {

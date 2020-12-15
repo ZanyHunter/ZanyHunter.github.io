@@ -14,27 +14,28 @@
         
     </head>
     <body>
-        <div id="video-banner">
-            <video autoplay muted loop id="video-banner--video">
-                <source src="/ref/videos/main.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <div id="video-banner--main"></div>
-            <div id="video-banner--title">
-                <div id="video-banner--reveal-title">
-                    <h1>Zany Lights</h1>
-                </div>
-                <hr>
-                    <div id="video-banner--reveal-subtitle">
-                        <h2>An extraordinary show</h2>
-                    </div>
+        <video autoplay muted loop id="video-banner--video">
+            <source src="/ref/videos/main.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div id="video-banner--main"></div>
+        <div id="video-banner--title">
+            <div id="video-banner--reveal-title">
+                <h1>Zany Lights</h1>
             </div>
-            <a class="arrow" href="#video-banner--polygon"></a>
-            <div id="wrapper--drop-shadow">
-                <div id="video-banner--polygon">
-                    <br><br><br>
-                    <h2 style="text-align:center;">Our shows</h2>
+            <hr>
+                <div class="showRunning" id="video-banner--reveal-subtitle" style="display: none;">
+                    <h2 style="display: inline-block;">We're live.</h2><a id="control-show" class="button--white" href="#">Control the Show</a><a id="control-show" class="button--white" href="#">Get Directions</a>
                 </div>
+                <div class="showNotRunning" id="video-banner--reveal-subtitle" style="display: none;">
+                    <h2>An extraordinary show</h2>
+                </div>
+        </div>
+        <a class="arrow" href="#video-banner--polygon"></a>
+        <div id="wrapper--drop-shadow">
+            <div id="video-banner--polygon">
+                <br><br><br>
+                <h2 style="text-align:center;">Our shows</h2>
             </div>
         </div>
         <div id="home-next-element"></div>
@@ -47,5 +48,8 @@
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Show running check -->
+        <script src="/home/scripts/livecheck.js"></script>
     </body>
 </html>

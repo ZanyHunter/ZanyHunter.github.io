@@ -34,6 +34,19 @@ h1 {
     width: 800px;
 }
 
+.button--white {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px 30px;
+
+    text-transform: uppercase;
+
+    border: 2px solid #FFFFFF;
+}
+
 @media only screen and (max-width:800px) {
     .content {
         width: 80%;
