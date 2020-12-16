@@ -14,12 +14,12 @@ var showEndDate = 26
 var showEndTime = [21, 30];
 
 // Run checker
-liveTrigger();
+showChecker();
 
 // A function that holds all check functions
-function liveTrigger() {
+function showChecker() {
     // Sunday Services
-    if(checkLive(date, showStartMonth, showStartDate, showStartTime, showEndMonth, showEndDate, showEndTime)){
+    if(isRunning(date, showStartMonth, showStartDate, showStartTime, showEndMonth, showEndDate, showEndTime)){
         document.getElementsByClassName("showNotRunning")[0].style.display = "none";
         document.getElementsByClassName("showRunning")[0].style.display = "block";
     } else {
@@ -28,7 +28,7 @@ function liveTrigger() {
     }
 }
 
-/** Check Live Function
+/** Returns true if show is running, false if not
  * 
  * @param {Date} currentDate 
  * @param {int} startMonth
@@ -37,9 +37,8 @@ function liveTrigger() {
  * @param {int} endMonth
  * @param {int} endDate
  * @param {Array} endTime 
- * @param {int} day Optional
  */
-function checkLive(currentDate, startMonth, startDate, startTime, endMonth, endDate, endTime) {
+function isRunning(currentDate, startMonth, startDate, startTime, endMonth, endDate, endTime) {
     // Should go live
     var showRunning = false;
     var cStartTime, cEndTime, cCurrentTime;
@@ -55,7 +54,7 @@ function checkLive(currentDate, startMonth, startDate, startTime, endMonth, endD
         currentHour += 24;
     }
 
-    // TODO KNOWN BUG: Day can be 0 if day gets decremented. Must change month to match, but needs to be last day of
+    // TODO KNOWN BUG: Day can be 0 if day gets decremented. Must change month to match, but needs to be last day of previous month.
     /*if (currentDateOfMonth < 1) {
         
     }*/
