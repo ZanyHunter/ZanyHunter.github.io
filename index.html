@@ -1,3 +1,5 @@
+<!-- Hello! I see you snooping around. Yes, everything in this website was hand-written from scratch. No themes or prebuilt elements here! -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,7 @@
     <body>
         <video autoplay muted loop id="video-banner--video">
             <source src="/ref/videos/main.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
+            Darn! Your browser does not support HTML5 video.
         </video>
         <div id="video-banner--main">
             <div id="video-banner--container">
@@ -35,15 +37,18 @@
                                 <a id="control-show" class="button--white" href="#">Get Directions</a>
                             </div>
                         </div>
-                        <div class="showNotRunning" id="reveal-subtitle--content" style="display: none;">
+                        <div class="showNotRunning" id="reveal-subtitle--content" style="display: block;">
                             <h2>An extraordinary show</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="arrow" href="#video-banner--polygon"></a>
-        <h2 style="text-align:center; top: 100vh;">Our shows</h2>     
+        <a class="arrow" href="#section--about-show"></a>
+        <div style="top: 100vh"></div>
+        <section class=section-dark id=section--about-show>
+            <h2 style="text-align:center; top: 100vh;">About the Show</h2>  
+        </section> 
 
         <!-- Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
