@@ -79,7 +79,7 @@ function isRunning(currentDate, startMonth, startDate, startTime, endMonth, endD
     
     if (startMonth <= currentMonth && currentMonth <= endMonth)
         if(startDate <= currentDateOfMonth && currentDateOfMonth <= endDate)
-            if (cStartTime <= cCurrentTime && cCurrentTime <= cEndTime)
+            if (cStartTime <= cCurrentTime && cCurrentTime < cEndTime)
                 showRunning = true;
 
     console.log("Show Running? " + showRunning);
