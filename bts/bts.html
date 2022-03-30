@@ -2,10 +2,103 @@
 <html>
 <head>
     <title>Behind the Scnees - ZanyLights</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="./styles/bts.css">
 </head>
 <body>
-    <section class="parallax middle" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/baseball.jpg);">
-        <h1>Baseball</h1>
+    <section class="parallax middle" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./ref/bts.png);">
+        <h1>Behind the Scenes</h1>
+    </section>
+    <section class="section-dark">
+        <p>
+            Hi! I'm Hunter, the sole  designer and creator of the Zany Lights show.
+            Everything you see in the show has been custom-constructed and programmed,
+            taking months of prep to get a show running every year.<br><br>
+            This Behind the Scenes look will take you on a tour of how I started,
+            and show you how a display like this is created!
+        </p>
+    </section>
+    <section class="section-dark">
+        <div style="max-width: 1000px; margin: auto;">
+            <h2>The History</h2>
+            <div class="grid">
+                <p class="middle">
+                    In 2017, when I was 15 years old, I saw a video of a Christmas light show online and thought I HAD to do that too.
+                    So, I hacked together a board that could control 16 channels of regular, AC Christmas lights
+                    and created a very simple show on my parents' house. This was only meant to be a test for my
+                    eyes only, but as I mentioned my project to my friends they were all amazed by the display!
+                </p>
+                <img src="./ref/history_2017.JPG">
+                <img src="./ref/history-2018.png">
+                <p class="middle">
+                    Because of the unexpected success in my first "test" year, I decided to dive in and purchase
+                    color-changing LED pixels, just like the ones seen lighting the display today. This changed
+                    the game in how I programmed my shows and opened up the doors to many posibilities. Like the
+                    previous year, I started simple, but this time made it a bit more public. Neighbors, friends,
+                    and family loved the unique and fun show as this was the first one of its kind in my town.
+                </p>
+                <p class="middle">
+                    I kept the show going without many changes until 2021, when I decided to do a complete overhaul
+                    and add more rooflines, candy canes, singing trees, and a wreath. These new props are what tied
+                    the show together and allowed me to further engage with viewers through singing, jokes, puns, and,
+                    of course, fun songs. After going viral on the social media platform Nextdoor, I was approached
+                    by a WTOP reporter who wrote a story that was distributed all around the country. Soon, cars filled
+                    with eager families packed out the neighborhood, patiently waiting their turn to see the show.
+                </p>
+                <img src="./ref/history-2021.png">
+                <img>
+                <p class="middle">
+                    Unfortunately, due to the nightly high traffic volumes created by the show, hosting the show at my
+                    parents' house was not feasible anymore, so I started looking for a new venue. Thankfully,
+                    Cornerstone Church reached out and requested a show installed on their building, which brings us
+                    here where we are today. This show has over five times the amount of lights as previously, and is
+                    by far the most intense project I have ever completed.<br><br>
+                    I am so excited for the future of this project and am looking forward to many future years of
+                    bringing joy to families from all over the country.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-dark" id="thetech">
+        <h2>The Tech</h2>
+        <p>
+            For those who are interested in the technical side of things, you've come to the right place.
+        </p><br>
+        <h4>Programming</h4>
+        <p>
+            The show all starts in a program called <a href="http://xlights.org" target="_blank" rel="noopener noreferrer">xLights</a>.
+            This program has all the tools needed to lay out the show, assign controllers to lights, and sequence effects to music.
+            The majority of my time is spent in this free program.
+        </p>
+        <br>
+        <h4>Control System</h4>
+        <p>
+            Once the show has been programmed, it is uploaded to what is really the beating heart of the entire show: a <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" target="_blank" rel="noopener noreferrer">Raspberry Pi</a>.
+            This tiny, $35 computer is the brains behind the entire show and is responsible for running the whole thing. Running a software called <a href="https://github.com/FalconChristmas/fpp#:~:text=The%20Falcon%20Player%20(FPP)%20is,FPP%20supports%20many%20more%20systems." target="_blank" rel="noopener noreferrer">Falcon Player (FPP)</a>,
+            this device allows a show to be scheduled on a calendar to automatically run.
+        </p>
+        <br>
+        <p>
+            The Raspberry Pi computer sends out lighting data (DMX) to the main pixel controller, a <a href="https://pixelcontroller.com/store/products/71-f48v4.html" target="_blank" rel="noopener noreferrer">Falcon F48V4</a>.
+            This device translates the lighting data from the Raspbery Pi into data the pixels can understand. Finally, the last stop is at one of 25 <a href="https://pixelcontroller.com/store/expansion-boards-and-receivers/72-4-string-differential-receiver-v200-board.html" target="_blank" rel="noopener noreferrer">Falcon SmartReceivers</a> scattered throughout the display.
+            Each smart receiver has four ports to which props can be directly plugged in.
+        </p>
+        <br>
+        <h4>Lights</h4>
+        <p>
+            Every light used in this display is an intelligent WS2811 pixel. These are individually-controlled LED lights that can display over 16 million colors.
+            There are about 10,000 of these pixels in the display. By combining these pixels in certain patterns, like snowflakes, singing bulbs, etc., all sorts of effects can be created.
+        </p>
+        <h4>Want More?</h4>
+        <p>
+            Consulting is available! <a href="../../index.html#section-contactus">Contact us by completing this form.</a>
+        </p>
     </section>
 </body>
 </html>

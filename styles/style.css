@@ -102,10 +102,25 @@ hr {
     background-size: cover;
   }
 
+  .parallax > h1 {
+      color: white;
+  }
+
   .middle {                                        
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section.section-dark {
+    background-color: #222222;
+    padding-top: 80px;
+    color: #FFFFFF;
+}
+
+section > p {
+    text-align: center;
+    margin: auto;
 }
 
   footer {
@@ -127,6 +142,10 @@ footer > p {
     grid-auto-rows: auto;
     grid-gap: 20px;
     padding: 20px;
+  }
+
+  .grid > img {
+      width: 100%;
   }
 
   @media only screen and (max-width:1290px) {
