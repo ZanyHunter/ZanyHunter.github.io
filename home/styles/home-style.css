@@ -142,8 +142,21 @@ html {
 
 section.section-dark {
     background-color: #222222;
-    padding: 20px;
+    padding-top: 80px;
     color: #FFFFFF;
+}
+
+#faq {
+    padding: 20px;
+}
+
+#about {
+    padding: 0;
+}
+
+#contactus {
+    margin: 0 auto;
+    display: block;
 }
 
 @keyframes arrow {
