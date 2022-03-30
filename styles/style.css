@@ -89,6 +89,25 @@ hr {
     text-align: center;
   }
 
+  .parallax {
+
+
+    /* Set a specific height */
+    min-height: 350px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .middle {                                        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
   footer {
     background-color: #111;
     height: 150px;
