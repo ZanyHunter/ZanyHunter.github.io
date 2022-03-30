@@ -278,6 +278,10 @@ section.section-dark {
         width: 100%;
     }
 
+    h2 {
+        font-size: 10vw;
+    }
+
     section {
         padding-left: 2.5%;
         padding-right: 2.5%;
