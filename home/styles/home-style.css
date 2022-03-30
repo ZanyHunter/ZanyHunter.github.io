@@ -157,6 +157,10 @@ section.section-dark {
 #contactus {
     margin: 0 auto;
     display: block;
+    width: 640;
+    height: 770;
+    border: none;
+    padding: 0;
 }
 
 @keyframes arrow {
@@ -267,5 +271,15 @@ section.section-dark {
     #video-banner--container {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    #contactus {
+        height: 800px;
+        width: 100%;
+    }
+
+    section {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
     }
 }

@@ -89,6 +89,18 @@ hr {
     text-align: center;
   }
 
+  footer {
+    background-color: #111;
+    height: 150px;
+    color: #FFFFFF;
+}
+
+footer > p {
+    top: 70px;
+    padding-top: 60px;
+    text-align: center;
+}
+
 /* Grid */
 .grid {
     display: grid;
