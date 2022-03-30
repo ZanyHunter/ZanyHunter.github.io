@@ -145,7 +145,8 @@ html {
 }
 
 #about {
-    padding: 0;
+    max-width: 1500px;
+    margin: auto;
 }
 
 #contactus {
