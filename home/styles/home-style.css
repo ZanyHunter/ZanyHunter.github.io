@@ -29,7 +29,7 @@ html {
     opacity: 0;
     animation: title-move 1s;
     animation-timing-function: ease;
-    animation-delay: 0.5s;
+    animation-delay: 0.8s;
     animation-fill-mode: forwards;
     transform: translateY(80px);
     padding-top: 20px;
@@ -59,7 +59,7 @@ html {
     opacity: 0;
     animation: title-move 1s;
     animation-timing-function: ease;
-    animation-delay: 0.5s;
+    animation-delay: 0.8s;
     animation-fill-mode: forwards;
     transform: translateY(80px);
 }
@@ -96,7 +96,7 @@ html {
     opacity: 0;
     animation: subtitle-move 1s;
     animation-timing-function: ease-out;
-    animation-delay: 0.7s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     transform: translateY(-100%);
 }
