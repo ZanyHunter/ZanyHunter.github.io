@@ -1,0 +1,31 @@
+#history > hr {
+    display: none;
+}
+
+@media only screen and (max-width:1290px) {
+    #p1  { order: 1 }
+    #i1  { order: 2 }
+    #hr1 { order: 3 }
+    #p2  { order: 4 }
+    #i2  { order: 5 }
+    #hr2 { order: 6 }
+    #p3  { order: 7 }
+    #i3  { order: 8 }
+    #hr3 { order: 9 }
+    #p4  { order: 10 }
+    #i4  { order: 11 }
+    
+    #history > img {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    #history > p {
+        text-align: center;
+        margin: auto;
+    }
+
+    #history > hr {
+        display: block;
+    }
+}
