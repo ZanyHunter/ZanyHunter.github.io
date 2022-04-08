@@ -19,6 +19,8 @@ html {
     height: 100vh;
     object-fit: cover;
     z-index: -999;
+    background-image: url("../../ref/images/video-backup.png");
+    background-color: black;
 }
 
 #reveal-title--container {
