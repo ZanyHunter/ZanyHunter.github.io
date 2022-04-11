@@ -19,6 +19,8 @@ html {
     height: 100vh;
     object-fit: cover;
     z-index: -999;
+    background-image: url("../../ref/images/video-backup.png");
+    background-color: black;
 }
 
 #reveal-title--container {
@@ -138,6 +140,10 @@ html {
 
 .button-grid > .button--white {
     margin: 10px 10px auto 10px;
+}
+
+.map {
+    filter: invert(90%);
 }
 
 #faq {

@@ -47,6 +47,13 @@ hr {
     border: 3px solid gray;
 }
 
+/* LINKS */
+
+a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: underline;
+}
+
 .button--white:hover {
     background-color: #FFFFFF;
     color: #000000;
@@ -59,7 +66,7 @@ hr {
 
 .button--white {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: unset !important;
     font-size: 20px;
     font-weight: bold;
     color: #FFFFFF;
@@ -114,7 +121,8 @@ hr {
 
 section.section-dark {
     background-color: #222222;
-    padding-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #FFFFFF;
 }
 

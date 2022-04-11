@@ -4,14 +4,12 @@ var date = new Date();
 // Is daylight Savings
 var daylightSavings = false;
 
-// Sunday Service times
-var showStartMonth = 11 // December (months start at 0)
-var showStartDate = 11 // Sunday
-var showStartTime = [18, 00];
+// Nightly start/end times
+var startTime = [18, 00]; // FORMAT: [HH, MM]
+var endTime   = [21, 30]; // FORMAT: [HH, MM]
 
-var showEndMonth = 11
-var showEndDate = 26
-var showEndTime = [21, 30];
+var dateStart = "12/01/2022" // FORMAT: MM/DD/YYYY
+var dateEnd   = "12/26/2022" // FORMAT: MM/DD/YYYY
 
 // Run checker
 showChecker();
@@ -19,7 +17,7 @@ showChecker();
 // A function that holds all check functions
 function showChecker() {
     // Sunday Services
-    if(isRunning(date, showStartMonth, showStartDate, showStartTime, showEndMonth, showEndDate, showEndTime)){
+    if(isRunning(date, dateStart, startTime, dateEnd, endTime)){
         document.getElementsByClassName("showNotRunning")[0].style.display = "none";
         document.getElementsByClassName("showRunning")[0].style.display = "block";
     } else {
@@ -31,26 +29,29 @@ function showChecker() {
 /** Returns true if show is running, false if not
  * 
  * @param {Date} currentDate 
- * @param {int} startMonth
- * @param {int} startDate
- * @param {Array} startTime 
- * @param {int} endMonth
- * @param {int} endDate
- * @param {Array} endTime 
+ * @param {string} dateStart
+ * @param {int[]} startTime 
+ * @param {string} dateEnd
+ * @param {int[]} endTime 
  */
-function isRunning(currentDate, startMonth, startDate, startTime, endMonth, endDate, endTime) {
+function isRunning(currentDate, dateStart, startTime, dateEnd, endTime) {
     // Should go live
     var showRunning = false;
     var cStartTime, cEndTime, cCurrentTime;
 
+    // Convert strings to dates
+    var d1 = dateStart.split("/");
+    var d2 = dateEnd.split("/");
+
+    var from = new Date(d1[2], parseInt(d1[0])-1, d1[1]);  // -1 because months are from 0 to 11
+    var to   = new Date(d2[2], parseInt(d2[0])-1, d2[1]);
+
     // Convert current date
-    var currentMonth = currentDate.getUTCMonth();
-    var currentDateOfMonth = currentDate.getUTCDate();
     var currentHour = currentDate.getUTCHours() - 4;
     var currentMin = currentDate.getUTCMinutes();
 
     if (currentHour < 0) { // Shifts day back by one if hours are negative
-        currentDateOfMonth--;
+        currentDate.setDate(currentDate.getDate() - 1);
         currentHour += 24;
     }
 
@@ -68,20 +69,18 @@ function isRunning(currentDate, startMonth, startDate, startTime, endMonth, endD
     if (!daylightSavings) {
         cCurrentTime -= 60;
     }
-
-    console.log("Current Month: " + currentMonth);
-    console.log("Current Date: " + currentDateOfMonth);
+    
+    console.log("Current Date: " + currentDate);
     console.log("Current Time: " + cCurrentTime / 60);
     console.log("Start Time: " + cStartTime / 60);
     console.log("End Time: " + cEndTime / 60);
 
     // Check if show is running
     
-    if (startMonth <= currentMonth && currentMonth <= endMonth)
-        if(startDate <= currentDateOfMonth && currentDateOfMonth <= endDate)
-            if (cStartTime <= cCurrentTime && cCurrentTime < cEndTime)
-                showRunning = true;
+    if(date >= from && date <= to)
+        if (cStartTime <= cCurrentTime && cCurrentTime < cEndTime)
+            showRunning = true;
 
-    console.log("Show Running? " + showRunning);
+    console.log("Show Running? " + (showRunning ? "Yes" : "No"));
     return showRunning;
 }
