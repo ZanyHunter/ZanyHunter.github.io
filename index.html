@@ -53,7 +53,8 @@
             </div>
         </div>
         <a class="arrow" href="#section--about-show"></a>
-        <div style="top: 100vh"></div>
+        <div style="height: 100vh; position: absolute;"></div>
+        <div w3-include-html="./ref/templates/header.html"></div>
         <section class=section-dark id=section--about-show>
             <h2>About the Show</h2>
             <br>
@@ -101,7 +102,7 @@
                 </div>
             </div>
         </section> 
-        <section class=section-dark>
+        <section class=section-dark id="section-faq">
             <div style="max-width: 1000px; margin: auto;">
                 <h2>FAQ</h2>
                 <div class="grid" id="faq">
@@ -157,5 +158,8 @@
 
         <!-- Countdown -->
         <script src="/home/scripts/countdown.js"></script>
+
+        <!-- HTML Include -->
+        <script src="/home/scripts/includehtml.js"></script>
     </body>
 </html>

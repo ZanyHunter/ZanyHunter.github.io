@@ -131,6 +131,35 @@ section > p {
     margin: auto;
 }
 
+header {
+    color: white;
+    background-color: #333;
+    height: 70px;
+}
+
+header > ul {
+    text-align: center;
+    position: relative !important;
+}
+
+header > ul > a {
+    display: inline-block;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: linear 0.1s;
+    text-decoration: none !important;
+    font-weight: bolder;
+}
+
+header > ul > a:hover {
+    background-color: #222;
+}
+
+header > .vertical-center {
+    position: relative;
+}
+
   footer {
     background-color: #111;
     height: 150px;
@@ -176,5 +205,33 @@ footer > p {
 
     .button--white {
         display: block;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header > ul {
+        position: absolute;
+        margin: 0;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    header > ul > a {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:801px) {
+    header > ul {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 }
