@@ -88,30 +88,30 @@ a:link, a:visited, a:hover, a:active {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
+}
 
-  p.center {
+p.center {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
+}
 
-  .parallax {
+.parallax {
 
 
     /* Set a specific height */
     min-height: 350px;
-  
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
-  .parallax > h1 {
-      color: white;
-  }
+.parallax > h1 {
+        color: white;
+}
 
   .middle {                                        
     display: flex;
@@ -160,7 +160,7 @@ header > .vertical-center {
     position: relative;
 }
 
-  footer {
+footer {
     background-color: #111;
     height: 150px;
     color: #FFFFFF;
@@ -179,24 +179,24 @@ footer > p {
     grid-auto-rows: auto;
     grid-gap: 20px;
     padding: 20px;
-  }
+}
 
-  .grid > img {
-      width: 100%;
-  }
+.grid > img {
+    width: 100%;
+}
 
-  @media only screen and (max-width:1290px) {
+@media only screen and (max-width:1290px) {
 
     .grid {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  
+
     .details {
-      justify-content: center;
-      text-align: center;
-      top: 0%;
+        justify-content: center;
+        text-align: center;
+        top: 0%;
     }
-  }
+}
 
 @media only screen and (max-width:800px) {
     .content {
