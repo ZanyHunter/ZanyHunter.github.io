@@ -15,7 +15,8 @@
     <section class="parallax middle" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./ref/bts.png);">
         <h1>Behind the Scenes</h1>
     </section>
-    <section class="section-dark" style="background-color: #333;">
+    <div w3-include-html="../../ref/templates/header.html"></div>
+    <section class="section-dark">
         <p>
             Hi! I'm Hunter, the sole  designer and creator of the Zany Lights show.
             Everything you see in the show has been custom-constructed and programmed,
@@ -24,7 +25,7 @@
             and show you how a display like this is created!
         </p>
     </section>
-    <section class="section-dark">
+    <section class="section-dark" style="background-color: #333;">
         <div style="max-width: 1000px; margin: auto;">
             <h2>The History</h2>
             <div class="grid" id="history">
@@ -68,7 +69,7 @@
             </div>
         </div>
     </section>
-    <section class="section-dark" id="thetech" style="background-color: #333;">
+    <section class="section-dark" id="thetech">
         <h2>The Tech</h2>
         <p>
             For those who are interested in the technical side of things, you've come to the right place.
@@ -104,5 +105,14 @@
             Consulting is available! <a href="../../index.html#section-contactus">Contact us by completing this form.</a>
         </p>
     </section>
+
+    <footer>
+        <p style="margin: auto;">
+            &copy; 2022 Hunter Pugh - All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- HTML Include -->
+    <script src="/home/scripts/includehtml.js"></script>
 </body>
 </html>
