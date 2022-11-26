@@ -6,9 +6,9 @@ var daylightSavings = false;
 
 // Nightly start/end times
 var startTime = [18, 00]; // FORMAT: [HH, MM]
-var endTime   = [21, 30]; // FORMAT: [HH, MM]
+var endTime   = [21, 00]; // FORMAT: [HH, MM]
 
-var dateStart = "12/01/2022" // FORMAT: MM/DD/YYYY
+var dateStart = "11/25/2022" // FORMAT: MM/DD/YYYY
 var dateEnd   = "12/26/2022" // FORMAT: MM/DD/YYYY
 
 // Run checker
