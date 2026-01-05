@@ -20,6 +20,8 @@ html {
     object-fit: cover;
     z-index: -999;
     background-image: url("../../ref/images/video-backup.png");
+    background-size: cover;
+    background-position: center center;
     background-color: black;
 }
 
